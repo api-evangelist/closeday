@@ -1,0 +1,16 @@
+generated: '2026-10-24'
+method: none
+source:
+- https://zapier.com/apps/closeday/integrations
+- https://n8n.io/integrations/closeday/
+- https://composio.dev/toolkits/closeday
+- https://monid.ai/tools/closeday
+checked:
+- https://composio.dev/toolkits/closeday
+- https://monid.ai/tools/closeday
+- https://n8n.io/integrations/closeday/
+- https://zapier.com/apps/closeday/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

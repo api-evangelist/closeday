@@ -1,0 +1,65 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - identity
+  - source
+  - website
+hosts:
+- host: api.closeday.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: closeday.com
+  role: api
+  relation: own
+- host: app.closeday.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves:
+  - docs
+  registrable_domain: closeday.com
+  role: identity
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: www.closeday.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Pricing
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: closeday.com
+  role: website
+  relation: own

@@ -1,0 +1,24 @@
+generated: '2026-10-24'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.closeday.com/pricing/
+sources:
+- https://www.closeday.com/pricing/
+- https://app.closeday.com/get-plan
+name: CloseDay pricing
+audience: business-product
+pricing_basis: flat-platform
+plans:
+- name: Standard closing
+  price_text: £499
+  price: 499
+  description: Companies with less than £25k in assets
+- name: Tax-efficient closing
+  price_text: £1,999
+  price: 1999
+  description: Companies with more than £25k in assets
+- name: Insolvent closing
+  price_text: £4,999
+  price: 4999
+  description: Companies that can't pay their debts
+docs: https://www.closeday.com/pricing/

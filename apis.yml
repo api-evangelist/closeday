@@ -1,25 +1,78 @@
 aid: closeday
+
 name: CloseDay
-description: 'CloseDay is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by crane-venture-partners) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Closeday provides end‑to‑end company closure services for UK small and mid‑sized businesses. It combines licensed insolvency practitioners with AI‑driven software to handle solvent strike‑offs, tax‑efficient MVLs and insolvent liquidations, including asset realisation, debt settlement and filings to HMRC and Companies House. Clients receive a free tailored plan and a fixed price before the service begins.'
+
 url: https://raw.githubusercontent.com/api-evangelist/closeday/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- Company Closure
+- Insolvency Services
+- Business Liquidation
+- UK Compliance
+- Asset Realisation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- crane-venture-partners
+
 common:
+- type: Plans
+  url: plans/closeday-plans-pricing.yml
+- type: Hosts
+  url: hosts/closeday-hosts.yml
+- type: Vendors
+  url: vendors/closeday-vendors.yml
+- type: TermsOfService
+  url: https://www.closeday.com/legal/terms-of-business
+- type: PrivacyPolicy
+  url: https://www.closeday.com/legal/privacy
+- type: Pricing
+  url: https://www.closeday.com/pricing
+- type: Login
+  url: https://app.closeday.com/login
+- type: GitHubOrganization
+  url: https://github.com/Closeday
+- type: DomainSecurity
+  url: security/closeday-domain-security.yml
 - type: Website
   url: https://www.closeday.com/
+
+apis: []
+
+x-backed-by:
+- crane-venture-partners
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.closeday.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
